@@ -3,12 +3,12 @@ Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.
 
 ## Integrantes
 * Pedro Moreira Ramos
-* Nome completo do aluno 2
+* Davi Aguilar Nunes Oliveira
 * Nome completo do aluno 3
 * Nome completo do aluno 4
 
 ## Orientadores
-* Nome completo do professor 1
+* Cristiano de Macêdo Neto
 * Nome completo do professor 2
 
 ## Instruções de utilização
