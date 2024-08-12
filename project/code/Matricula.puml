@@ -1,0 +1,34 @@
+@startuml
+
+' Define os atores
+actor Aluno
+actor Professor
+actor Secretaria
+actor SistemaCobranças as "Sistema de Cobranças"
+actor Sistema as "Sistema de Matrículas"
+
+' Define os casos de uso
+usecase "Gerar Currículo" as UC1
+usecase "Consultar Alunos por Disciplina" as UC2
+usecase "Matricular em Disciplina" as UC3
+usecase "Cancelar Matrícula" as UC4
+usecase "Notificar Cobrança" as UC5
+usecase "Validar Login" as UC6
+
+' Define as relações entre atores e casos de uso
+Aluno --> UC3 : "Realiza matrícula"
+Aluno --> UC4 : "Cancela matrícula"
+
+Professor --> UC2 : "Consulta alunos"
+Professor --> UC6 : "Realiza login"
+
+Secretaria --> UC1 : "Gera currículo"
+Secretaria --> UC6 : "Realiza login"
+
+SistemaCobranças --> UC5 : "Recebe notificações"
+
+Sistema --> UC6 : "Valida login"
+Sistema --> UC3 : "Permite matrícula"
+Sistema --> UC4 : "Permite cancelamento"
+
+@enduml
