@@ -1,24 +1,24 @@
-# Nome do Projeto
+# Nome do Projeto 
 
 Este projeto visa desenvolver um sistema informatizado para gerenciar as matrículas de uma universidade. O sistema permitirá a Secretaria da universidade gerenciar currículos, professores e alunos, além de possibilitar aos alunos se matricularem e cancelarem suas matrículas em disciplinas de forma eficiente. Professores poderão consultar a lista de alunos matriculados e o sistema de cobranças será integrado para garantir a correta faturação das disciplinas.
 
 ## Integrantes
-* Pedro Moreira Ramos
-* Davi Aguilar Nunes Oliveira
+* Pedro Moreira Ramos ![User Icon](https://avatars.githubusercontent.com/u/117239949?s=20&v=4)
+* Davi Aguilar Nunes Oliveira ![User Icon](https://avatars.githubusercontent.com/u/129971903?s=20&v=4)
 
 ## Orientador
-* Cristiano de Macêdo Neto
+* Cristiano de Macêdo Neto 
 
 ## Instruções de Utilização
 
-Assim que a primeira versão do sistema estiver disponível, as instruções de utilização serão complementadas. Descreva como instalar eventuais dependências e como executar a aplicação. 
+Assim que a primeira versão do sistema estiver disponível, as instruções de utilização serão complementadas. Descreva como instalar eventuais dependências e como executar a aplicação.
 
 ## Histórias de Usuários
 
-### 1. História de Usuário: Gerar Currículo
+### 1. História de Usuário: Gerar Currículo 
 
-**Como** Secretaria,  
-**Eu quero** gerar e atualizar o currículo das disciplinas para cada semestre,  
+**Como** Secretaria,
+**Eu quero** gerar e atualizar o currículo das disciplinas para cada semestre,
 **Para que** eu possa garantir que as disciplinas corretas sejam oferecidas e os alunos possam se matricular nelas.
 
 #### Critérios de Aceitação
@@ -27,10 +27,10 @@ Assim que a primeira versão do sistema estiver disponível, as instruções de 
 - O currículo pode ser atualizado com novas informações sobre as disciplinas, como horários e professores.
 - O sistema deve refletir as mudanças no currículo para o próximo semestre.
 
-### 2. História de Usuário: Consultar Alunos por Disciplina
+### 2. História de Usuário: Consultar Alunos por Disciplina 
 
-**Como** Professor,  
-**Eu quero** consultar a lista de alunos matriculados em minhas disciplinas,  
+**Como** Professor,
+**Eu quero** consultar a lista de alunos matriculados em minhas disciplinas,
 **Para que** eu possa saber quem são os alunos que frequentarão minhas aulas e acompanhar seu progresso.
 
 #### Critérios de Aceitação
@@ -38,10 +38,10 @@ Assim que a primeira versão do sistema estiver disponível, as instruções de 
 - A lista deve incluir informações básicas dos alunos, como nome e número de matrícula.
 - O Professor pode acessar essa lista a qualquer momento através do sistema.
 
-### 3. História de Usuário: Matricular em Disciplina
+### 3. História de Usuário: Matricular em Disciplina 
 
-**Como** Aluno,  
-**Eu quero** me matricular em disciplinas obrigatórias e optativas para o semestre,  
+**Como** Aluno,
+**Eu quero** me matricular em disciplinas obrigatórias e optativas para o semestre,
 **Para que** eu possa completar os requisitos do meu curso e avançar na minha graduação.
 
 #### Critérios de Aceitação
@@ -50,10 +50,10 @@ Assim que a primeira versão do sistema estiver disponível, as instruções de 
 - O Aluno deve receber uma confirmação de matrícula após completar o processo.
 - O sistema deve permitir o cancelamento de matrículas até um prazo definido.
 
-### 4. História de Usuário: Cancelar Matrícula
+### 4. História de Usuário: Cancelar Matrícula 
 
-**Como** Aluno,  
-**Eu quero** cancelar uma matrícula em uma disciplina,  
+**Como** Aluno,
+**Eu quero** cancelar uma matrícula em uma disciplina,
 **Para que** eu possa alterar minha escolha de disciplinas e ajustar minha carga horária conforme necessário.
 
 #### Critérios de Aceitação
@@ -63,8 +63,8 @@ Assim que a primeira versão do sistema estiver disponível, as instruções de 
 
 ### 5. História de Usuário: Notificar Cobrança
 
-**Como** Sistema de Cobranças,  
-**Eu quero** ser notificado sobre as disciplinas em que os alunos estão matriculados,  
+**Como** Sistema de Cobranças,
+**Eu quero** ser notificado sobre as disciplinas em que os alunos estão matriculados,
 **Para que** eu possa gerar as cobranças corretamente e enviar os boletos aos alunos.
 
 #### Critérios de Aceitação
@@ -74,12 +74,11 @@ Assim que a primeira versão do sistema estiver disponível, as instruções de 
 
 ### 6. História de Usuário: Validar Login
 
-**Como** Usuário do Sistema (Aluno ou Professor),  
-**Eu quero** fazer login no sistema com minhas credenciais,  
+**Como** Usuário do Sistema (Aluno ou Professor),
+**Eu quero** fazer login no sistema com minhas credenciais,
 **Para que** eu possa acessar as funcionalidades do sistema de matrículas, como matrícula, consulta de alunos e geração de relatórios.
 
 #### Critérios de Aceitação
 - O sistema deve validar o login com base no nome de usuário e senha fornecidos.
 - Se as credenciais estiverem corretas, o usuário deve acessar as funcionalidades apropriadas.
 - Se as credenciais estiverem incorretas, o sistema deve exibir uma mensagem de erro e solicitar a reentrada dos dados.
-
