@@ -1,5 +1,8 @@
 @startuml
 
+
+left to right direction
+
 ' Define os atores
 actor Aluno
 actor Professor

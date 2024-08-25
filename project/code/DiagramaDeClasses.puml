@@ -1,0 +1,49 @@
+@startuml
+
+left to right direction
+
+class Usuario {
+    int id
+    String nome
+    String email
+    String senha
+}
+
+class Aluno {
+    String matricula
+    String curso
+}
+
+class Professor {
+    String departamento
+}
+
+class Secretaria {
+}
+
+class SistemaCobrancas {
+}
+
+class Disciplina {
+    String codigo
+    String nome
+    int creditos
+    Professor professor
+}
+
+class Matricula {
+    Aluno aluno
+    Disciplina disciplina
+    Date dataMatricula
+}
+
+Usuario <|-- Aluno
+Usuario <|-- Professor
+Usuario <|-- Secretaria
+
+Aluno "1" --> "4" Matricula : matriculaObrigatoria
+Aluno "1" --> "2" Matricula : matriculaOptativa
+Disciplina "1" --> "many" Matricula : disciplina
+Professor "1" --> "many" Disciplina : leciona
+
+@enduml

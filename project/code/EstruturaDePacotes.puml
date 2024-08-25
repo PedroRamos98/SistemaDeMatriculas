@@ -1,0 +1,25 @@
+@startuml
+
+package "model" {
+    class Usuario
+    class Aluno
+    class Professor
+    class Secretaria
+    class Disciplina
+    class Matricula
+}
+
+package "service" {
+    class SistemaDeCobranca
+}
+
+Usuario <|-- Aluno
+Usuario <|-- Professor
+Usuario <|-- Secretaria
+
+Aluno "1" --> "4" Matricula : matriculaObrigatoria
+Aluno "1" --> "2" Matricula : matriculaOptativa
+Disciplina "1" --> "many" Matricula : disciplina
+Professor "1" --> "many" Disciplina : leciona
+
+@enduml
