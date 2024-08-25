@@ -1,22 +1,33 @@
 package model;
 
 public class Usuario {
-    private int id;
-    private String nome;
-    private String email;
+    private String login;
     private String senha;
 
-    public Usuario(int id, String nome, String email, String senha) {
-        this.id = id;
-        this.nome = nome;
-        this.email = email;
+    public Usuario(String login, String senha) {
+        this.login = login;
         this.senha = senha;
     }
 
-    public boolean login(String email, String senha) {
-        // Implementar lógica de login
+    public boolean realizarLogin(String login, String senha) {
+        // Método não implementado
         return false;
     }
 
     // Getters e Setters
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
 }

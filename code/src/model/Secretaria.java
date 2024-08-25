@@ -2,13 +2,15 @@ package model;
 
 public class Secretaria extends Usuario {
 
-    public Secretaria(int id, String nome, String email, String senha) {
-        super(id, nome, email, senha);
+    public Secretaria(String login, String senha) {
+        super(login, senha);
     }
 
-    public void gerarCurriculo() {
-        // Implementar lógica de geração de currículo
+    public void gerarCurriculo(Aluno aluno) {
+        // Método não implementado
     }
 
-    // Getters e Setters
+    public void notificarSistemaFinanceiro(Aluno aluno) {
+        // Método não implementado
+    }
 }

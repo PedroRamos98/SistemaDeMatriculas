@@ -1,49 +1,46 @@
 @startuml
-
-left to right direction
-
 class Usuario {
-    int id
-    String nome
-    String email
-    String senha
+    -login: String
+    -senha: String
+    +realizarLogin(login: String, senha: String): boolean
 }
 
 class Aluno {
-    String matricula
-    String curso
+    -matricula: String
+    -nome: String
+    +matricularEmDisciplina(disciplina: Disciplina): boolean
+    +cancelarMatricula(disciplina: Disciplina): boolean
+    +buscarDisciplina(nome: String): Disciplina
 }
 
 class Professor {
-    String departamento
+    -nome: String
+    +consultarAlunosPorDisciplina(disciplina: Disciplina): List<Aluno>
 }
 
 class Secretaria {
-}
-
-class SistemaCobrancas {
+    +gerarCurriculo(aluno: Aluno): void
+    +notificarSistemaFinanceiro(aluno: Aluno): void
 }
 
 class Disciplina {
-    String codigo
-    String nome
-    int creditos
-    Professor professor
+    -nome: String
+    -creditos: int
+    -alunosMatriculados: List<Aluno>
+    +matricularAluno(aluno: Aluno): boolean
+    +cancelarMatricula(aluno: Aluno): boolean
+    +getAlunosMatriculados(): List<Aluno>
 }
 
-class Matricula {
-    Aluno aluno
-    Disciplina disciplina
-    Date dataMatricula
-}
+
 
 Usuario <|-- Aluno
 Usuario <|-- Professor
 Usuario <|-- Secretaria
 
-Aluno "1" --> "4" Matricula : matriculaObrigatoria
-Aluno "1" --> "2" Matricula : matriculaOptativa
-Disciplina "1" --> "many" Matricula : disciplina
-Professor "1" --> "many" Disciplina : leciona
-
+Aluno --> Disciplina : matricular
+Aluno --> Secretaria : solicitarCurriculo
+Aluno --> Disciplina : buscar
+Professor --> Disciplina : consultarAlunos
+Secretaria --> Aluno : geraCurriculo
 @enduml
