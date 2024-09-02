@@ -18,6 +18,18 @@ public Aluno(String nome, String email, String senha, String matricula, String c
     }
 
 
+    @Override
+    public String toString() {
+        return "Aluno{" +
+                "nome='" + getNome() + '\'' +
+                ", email='" + getEmail() + '\'' +
+                ", senha='" + getSenha() + '\'' +
+                ", matricula='" + matricula + '\'' +
+                ", curso='" + curso + '\'' +
+                '}';
+    }
+
+
     public String getMatricula() {
         return matricula;
     }

@@ -20,6 +20,16 @@ public abstract class Usuario implements Serializable {
         this.senha = senha;
     }
 
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "nome='" + nome + '\'' +
+                ", email='" + email + '\'' +
+                ", senha='" + senha + '\'' +
+                '}';
+    }
+
     public boolean login(String email, String senha) {
         return this.email.equals(email) && this.senha.equals(senha);
     }

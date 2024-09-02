@@ -54,6 +54,7 @@ public class Main {
         return null;
     }
 
+
     private static void criarCadastro(Scanner scanner) {
         System.out.print("Nome: ");
         String nome = scanner.nextLine();
@@ -80,6 +81,7 @@ public class Main {
         }
 
         usuarios.add(novoUsuario);
+        salvarUsuariosEmArquivo(); // Chama o método para salvar os usuários no arquivo
         System.out.println("Usuário cadastrado com sucesso.");
     }
 
@@ -138,5 +140,17 @@ public class Main {
     }
 
     private static void menuSecretaria(Secretaria secretaria, Scanner scanner) {
+    }
+
+    // Adicione este método na classe Main
+    private static void salvarUsuariosEmArquivo() {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("usuarios.txt"))) {
+            for (Usuario usuario : usuarios) {
+                writer.write(usuario.toString());
+                writer.newLine();
+            }
+        } catch (IOException e) {
+            System.out.println("Erro ao salvar usuários: " + e.getMessage());
+        }
     }
 }

@@ -7,6 +7,9 @@ package "model" {
     class Secretaria
     class Disciplina
     class Matricula
+    class Curriculo
+    class Curso
+    class Turma
 }
 
 package "service" {
@@ -21,5 +24,9 @@ Aluno "1" --> "4" Matricula : matriculaObrigatoria
 Aluno "1" --> "2" Matricula : matriculaOptativa
 Disciplina "1" --> "many" Matricula : disciplina
 Professor "1" --> "many" Disciplina : leciona
+
+Curriculo "1" --> "many" Turma : contem
+Curso "1" --> "many" Curriculo : possui
+Aluno "1" --> "1" Curso : pertence
 
 @enduml
