@@ -12,38 +12,58 @@ class Usuario {
 class Aluno {
     String matricula
     String curso
+    List<Disciplina> disciplinasObrigatorias
+    List<Disciplina> disciplinasOptativas
+    +matricularDisciplina(Disciplina disciplina, boolean obrigatoria)
+    +cancelarMatricula(Disciplina disciplina)
 }
 
 class Professor {
-    String departamento
+    +verAlunosMatriculados(Disciplina disciplina): List<Aluno>
+}
+
+class Curriculo {
+    String curso
+    int semestre
+    int ano
+    List<Turma> turmas
+    List<Disciplina> disciplinasObrigatorias
+    List<Disciplina> disciplinasOptativas
+    +gerarCurriculo(Aluno aluno)
 }
 
 class Secretaria {
-}
-
-class SistemaCobrancas {
+    List<Curriculo> curriculos
+    +gerarCurriculo(Aluno aluno)
+    +criarDisciplina(List<Disciplina> disciplinas, String codigo, String nome, int numCred)
 }
 
 class Disciplina {
     String codigo
     String nome
-    int creditos
+    int numCred
+
+}
+
+class Turma {
+    String status
+    int min
+    int max
+    List<Aluno> alunos
     Professor professor
+    +adicionarAluno(Aluno aluno)
+    +removerAluno(Aluno aluno)
+    +isCheia(): boolean
+    +isAtiva(): boolean
 }
 
-class Matricula {
-    Aluno aluno
-    Disciplina disciplina
-    Date dataMatricula
-}
-
+Aluno --> Secretaria
 Usuario <|-- Aluno
 Usuario <|-- Professor
-Usuario <|-- Secretaria
-
-Aluno "1" --> "4" Matricula : matriculaObrigatoria
-Aluno "1" --> "2" Matricula : matriculaOptativa
-Disciplina "1" --> "many" Matricula : disciplina
-Professor "1" --> "many" Disciplina : leciona
+Aluno "many" --o "one" Turma
+Turma "many" o-- "one" Professor
+Turma --o Curriculo
+Disciplina "1" --> "many" Turma
+Curriculo "many" --o "one" Secretaria
 
 @enduml
