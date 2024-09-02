@@ -1,19 +1,23 @@
-package model;
+package main.java.model;
+
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+@AllArgsConstructor
+@NoArgsConstructor
 public class Aluno extends Usuario {
     private String matricula;
     private String curso;
 
-
-    public Aluno(int id, String nome, String email, String senha, String matricula, String curso) {
-        super(id, nome, email, senha);
+public Aluno(String nome, String email, String senha, String matricula, String curso) {
+        super(nome, email, senha);
         this.matricula = matricula;
         this.curso = curso;
     }
 
-    // Getters and Setters
+
     public String getMatricula() {
         return matricula;
     }

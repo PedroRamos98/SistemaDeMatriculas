@@ -1,13 +1,19 @@
-package model;
+package main.java.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.LinkedList;
 
-
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 public class Secretaria {
     private LinkedList<Curriculo> curriculos;
 
-
-    public Secretaria(){}
 
 
     public void gerarCurriculo(Aluno aluno) {
@@ -58,16 +64,18 @@ public class Secretaria {
         }
     }
 
-    public void mostrarAlunosDaTurma(Turma turma) {
-        for(Aluno aluno: alunos){
-
-
-
-        }
+    public void mostrarTurmasProfessor(Professor professor){
+        for (Curriculo curriculo:curriculos)
+            curriculo.getTurmasProfessor(professor);
     }
 
-
-
+    public void mostrarCurriculoAluno(Aluno aluno) {
+        for (Curriculo curriculo : curriculos) {
+            if (curriculo.getCurso().equals(aluno.getCurso())){
+                curriculo.printTurmas();
+            }
+        }
+    }
 
 
 }

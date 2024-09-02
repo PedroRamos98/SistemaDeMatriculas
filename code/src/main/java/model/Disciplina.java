@@ -1,10 +1,15 @@
-package model;
+package main.java.model;
+
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Disciplina implements Serializable {
+@AllArgsConstructor
+@NoArgsConstructor
+public class Disciplina {
     private String codigo;
     private Boolean obrigatoria;
     private String nome;

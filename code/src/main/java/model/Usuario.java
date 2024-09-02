@@ -1,17 +1,20 @@
-package model;
+package main.java.model;
 
+
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
-
+@AllArgsConstructor
+@NoArgsConstructor
 public abstract class Usuario implements Serializable {
     private int id;
     private String nome;
     private String email;
     private String senha;
 
-    public Usuario(int id, String nome, String email, String senha) {
-        this.id = id;
+    public Usuario(String nome, String email, String senha) {
         this.nome = nome;
         this.email = email;
         this.senha = senha;
